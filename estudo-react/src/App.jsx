@@ -2,7 +2,7 @@ import React from 'react';
 import { PrimeReactProvider } from 'primereact/api';
 import './App.css'
 import 'primeicons/primeicons.css';
-import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primereact/resources/themes/lara-light-indigo/theme.css";
 import {BrowserRouter, Routes, Route, RouterProvider} from 'react-router-dom';
 import Menu from '../components/Menu';
 import Cursos from '../views/Cursos';
