@@ -5,7 +5,7 @@ import 'primeicons/primeicons.css';
 import "primereact/resources/themes/lara-light-cyan/theme.css";
 import {BrowserRouter, Routes, Route, RouterProvider} from 'react-router-dom';
 import Menu from '../components/Menu';
-
+import Cursos from '../views/Cursos';
 
 
 import Home from '../views/Home';
@@ -16,12 +16,13 @@ function App() {
   return (
     <>
       <PrimeReactProvider>
-        <Menu />
+        {/* <Menu /> */}
         <BrowserRouter>
-            <Routes>
+          <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/formulario" element={<Formulario />} />
-        </Routes>       
+                <Route path="/cursos" element={<Cursos />} />
+          </Routes>       
         </BrowserRouter>
       </PrimeReactProvider>
     </>

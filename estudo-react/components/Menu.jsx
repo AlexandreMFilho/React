@@ -10,6 +10,7 @@ function Menu() {
     {
         label: 'Home',
         icon: 'pi pi-home',
+        onclick: ()=>{navigate('/home')},
     },
     {
         label: 'Form',
