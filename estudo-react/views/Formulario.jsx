@@ -36,8 +36,8 @@ function Formulario() {
           </FloatLabel>
 
           
-          <Button label="Cancelar" severity="secondary" />
-          <Button label="Submeter" severity="success" />
+          {/* <Button label="Cancelar" severity="secondary" />
+          <Button label="Submeter" severity="success" /> */}
            
            
         </div>

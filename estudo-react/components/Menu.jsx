@@ -10,25 +10,28 @@ function Menu() {
     {
         label: 'Home',
         icon: 'pi pi-home',
-        onclick: ()=>{navigate('/home')},
+        url:'/'
     },
     {
-        label: 'Form',
+        label: 'Criar Curso',
         icon: 'pi pi-pencil',
+        url:'/criar-cursos' ,
     },
     {
-        label: 'About',
+        label: 'Listar Cursos',
         icon: 'pi pi-search',
+        url:'/listar-cursos',
     },
     {
-        label: 'Contact',
-        icon: 'pi pi-envelope'
+        label: 'Detalhar Curso',
+        icon: 'pi pi-envelope',
+        url:'/detalha-curso',
     }
 ];
   return (
     <>
       <PrimeReactProvider>
-        <div className='card'>
+        <div className='card' >
           <Menubar model={items} />
         </div>
       </PrimeReactProvider>

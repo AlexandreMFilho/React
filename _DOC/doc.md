@@ -1,11 +1,21 @@
-# Instalar
+# REACT 
 
-1. Instalar NodeJS
+Para utilizar o React para criar um projeto, seja ele um site ou app, precisamos primeiramente do NodeJs então ...
+# Instalar NodeJS
+Por experiência própria, pesquise como instala-lo em seu site:
+    `https://nodejs.org/en/download`
+<font color="red">Sério, essas coisas atualizam muito rápido e até mesmo esse link aqui, pode daqui a pouco estar fora do ar.</font>
+
 2. Criar App React
     `npm create vite <NomeProjeto>`
-    `npm isntall`
-3. `npm run dev` ~dentro do projeto
-4. Instalar PrimeReact
+    `npm install`
+3. Para Iniciar o projeto e ver suas modificações sendo feitas **Em tempo Real**
+Entre na pasta do projeto e rode:
+    `npm run dev`
+
+#### Iremos usar o FremeWork PrimeReact para isso:
+# Instalar PrimeReact
+
     `npm install primereact`
     `npm install primeicons`
 
