@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function NavBar(props) {
   return (
     <PrimeReactProvider>
-      <div style={{border:"1px solid black", display:"flex", flexDirection:"row",padding:"0em 1em"}}>
+      <div style={{border:"1px solid black", display:"flex", flexDirection:"row",margin:"0em 1em",justifyContent:'flex-start',gap:'1em'}}>
         <Link to="/Home">
           <Button label="Home" severity="success" raised />
         </Link>

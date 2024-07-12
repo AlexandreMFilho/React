@@ -1,22 +1,18 @@
-import { PrimeReactProvider } from 'primereact/api';
-import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from '../views/Home';
+import { Outlet } from 'react-router-dom';
+import Footer from '../components/Footer';
+import Head from '../components/Head';
+import NavBar from '../components/NavBar';
 
 function App() {
 
   return (
     <>
-      <PrimeReactProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/pokedex" element={<Home />} />
-            <Route path="/pokedex/{num}" element={<Home />} />
-            <Route path="/pokedex/{num}/evolucao" element={<Home />} />
-          </Routes>
-        </BrowserRouter>
-      </PrimeReactProvider>
+      <div style={{ display:"flex", flexDirection:'column',width:'100%',}}>
+        <Head />
+        <NavBar />
+        <Outlet />
+        <Footer />
+      </div>
     </>
   )
 }

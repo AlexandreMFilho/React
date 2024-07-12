@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import avatar from '../images/avatar.png';
 // import '../src/App.css';
 
@@ -7,19 +7,6 @@ function Login() {
     const [logado, setLogado] = useState(false)
     const [text, setText] = useState("Login")
 
-    function changeText(){
-      
-    }
-
-    useEffect(()=>{
-
-        if(logado){
-            setNome("Autenticado")
-        }else{
-            setNome("Não autenticado")
-        }
-
-    },[logado])
   
   return (
     <>
@@ -31,8 +18,8 @@ function Login() {
         <div style={{display:'flex', flexDirection:'column',}}>
             {
             {logado}?
-            <button onClick={()=>setLogado(true)}>Login</button>:
-            <button style={{height:"2em",fontSize:12}} onClick={()=>setLogado(false)}>Logout</button>
+            <button >Login</button>:
+            <button style={{height:"2em",fontSize:12}} >Logout</button>
             }
         </div>
 
