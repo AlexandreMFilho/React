@@ -6,9 +6,10 @@ import Ginasios from '../views/Ginasios.jsx'
 import Home from '../views/Home.jsx'
 import Pokedex from '../views/Pokedex.jsx'
 import Pokemon from '../views/Pokemon.jsx'
-import './index.css'
 import './App.css'
 import App from './App.jsx'
+import './index.css'
+        
 
 const router = createBrowserRouter([
 {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
       element: <Pokedex />
     },
     {
-      path:"/pokedex/:id",
+      path:"/pokedex/1",
       element: <Pokemon />
     },
     {
