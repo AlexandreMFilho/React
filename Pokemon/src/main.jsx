@@ -1,3 +1,5 @@
+import { PrimeReactProvider } from "primereact/api"
+import "primereact/resources/themes/lara-light-cyan/theme.css"
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
@@ -9,6 +11,8 @@ import Pokemon from '../views/Pokemon.jsx'
 import './App.css'
 import App from './App.jsx'
 import './index.css'
+
+
         
 
 const router = createBrowserRouter([
@@ -41,7 +45,10 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <PrimeReactProvider>
+    <React.StrictMode>
+      <RouterProvider router={router} />
+    </React.StrictMode>
+
+  </PrimeReactProvider>
 )

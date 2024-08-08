@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import Head from '../components/Head';
 import NavBar from '../components/NavBar';
 
+
 function App() {
 
   return (

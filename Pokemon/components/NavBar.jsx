@@ -9,7 +9,7 @@ function NavBar(props) {
         <Link to="/Home">
           <Button label="Home" severity="success" raised />
         </Link>
-        <Link to="/Pokedex">
+        <Link to="/pokedex">
           <Button label="Pokédex" severity="success" raised />
         </Link>
         <Link to="/ginasios">
