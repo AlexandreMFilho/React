@@ -1,35 +1,38 @@
+import { Avatar } from 'primereact/avatar';
 import { Column } from 'primereact/column';
 import { DataTable } from 'primereact/datatable';
 import { useState } from 'react';
-        
+import { useNavigate } from 'react-router-dom';
+
 function Pokedex() {
 
   const {pkmnSelecionado, setpkmnSelecionado} = useState(null);
+  const navigate = useNavigate();
 
   const pokemons = [
     {
-      nome: 'Bulbasaur',
-      categoria: 'Seed',
-      quantidade: 1
+      id: 1,
+      image:<Avatar image="../images/Bulbasaur.png" />,
+      name: 'Bulbassaur',
+      types: ['Grass', 'Poison'],
     },
     {
-      nome: 'Charmander',
-      categoria: 'Lizard',
-      quantidade: 1,
-      link:'a'
+      id: 4,
+      image:<Avatar image="../images/Charmander.png" />,
+      name: 'Charmander',
+      types: ['Fire'],
     },
     {
-      nome: 'Squirtle',
-      categoria: 'Tiny Turtle',
-      quantidade: 1
+      id: 7,
+      image:<Avatar image="../images/Squirtle.png" />,
+      name: 'Squirtle',
+      types: ['Water'],
     }
   ]
 
-  // useEffect(() => {
-  //   pokemons.getProductsMini().then((data) => setProducts(data));
-  // }, []);
-
   const onRowSelect = (event) => {
+
+    navigate("/pokedex/"+event.data.id);
     console.log("event");
   }
 
@@ -43,10 +46,11 @@ function Pokedex() {
     <h1>Pokedex</h1>
     
     <div className="card" style={{padding:"1em"}}>
-      <DataTable value={pokemons} selectionMode="single" selection={pkmnSelecionado} onSelectionChange={(e)=> setpkmnSelecionado(e.value) } datakey="id" onRowSelect={onRowSelect} onRowUnselect={onRowUnselect} metaKeySelection={false} tableStyle={{ minWidth: '50rem' }}>
-        <Column field="nome" header="Nome"></Column>
-        <Column field="categoria" header="Categoria"></Column>
-        <Column field="quantidade" header="Quantidade"></Column>
+      <DataTable value={pokemons} selectionMode="single" datakey="id" onRowSelect={onRowSelect} metaKeySelection={false} tableStyle={{ minWidth: '50rem' }}>
+        <Column field="id" header="ID"></Column>
+        <Column field="image" header="Sprite"></Column>
+        <Column field="name" header="Nome"></Column>
+        <Column field="types" header="Tipos"></Column>
       </DataTable>
     </div>
     
